@@ -1572,9 +1572,12 @@ Details:
 - **4d. A student submitted activities for the previous week and then deleted all of them:**
   - 4d1. The system treats her weekly activity report as missing (BR-outstanding-submission).
   - 4d2. The use case continues at step 5.
-- **6a. The current time is not within the 24 hours before the submission's deadline:**
+- **6a. The current time is not within the 24 hours before the deadline of either kind of submission:**
   - 6a1. The system informs the instructor that reminders may be sent only within the 24 hours before the deadline and does not send a reminder (BR-reminder-limit).
   - 6a2. Use case ends.
+- **6b. The current time is within the 24 hours before the deadline of only one kind of submission:**
+  - 6b1. The system informs the instructor that reminders will be sent only for that kind of submission (BR-reminder-limit).
+  - 6b2. The use case continues at step 7, and each reminder lists only the student's missing items of that kind.
 - **7a. A student has already been sent a reminder for that kind of submission this week:**
   - 7a1. The system does not send her a second reminder (BR-reminder-limit).
   - 7a2. The use case continues at step 7 with the next student.
